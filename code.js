@@ -1,4 +1,5 @@
 /**
+ * Detect cycles using dfs search. Expects a adj list as the graph representation
  * @param {number[][]} graph
  * @returns {boolean}
  */
@@ -10,7 +11,7 @@ function hasCycle(graph) {
    * @param {number} parent
    * @returns {boolean}
    */
-  function search(node, parent = -1) {
+  function search(node, parent = Infinity) {
     visited.add(node);
 
     for (const neighbor of graph[node]) {
