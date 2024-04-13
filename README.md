@@ -28,3 +28,13 @@ for (let node = 0; node < graph.length; node++) {
 If we take a closer look at the code we see we will iterate over each verticy in which we have not already visited. This means a total of $V$ veriticies will be iterated over.
 
 Then inside the `search()` function we iterate over all connected edges for the current node. Therefore the **worst-case** runtime complexity to detect a cycle in a graph using this algorithm is $\Theta(V + E)$.
+
+## Resources & Misc
+
+I also added a graphs.jpg of the graphs I created on a whiteboard for testing.
+
+I have been following a series on youtube which has been very helpful for all of these graph related problems. 
+
+https://www.youtube.com/watch?v=7fujbpJ0LB4
+
+Here is one of the videos I was replaying today to help me with this and the graph-search problem.
