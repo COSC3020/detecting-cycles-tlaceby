@@ -1,3 +1,5 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/3yAkp-x3)
+
 # Detecting Cycles in Graphs
 
 Kruskal's Algorithm adds edges to the minimum spanning tree, unless they would
@@ -13,5 +15,26 @@ the function and run automatically when you commit through a GitHub action.
 
 ## Runtime Analysis
 
-What is the worst-case big $\Theta$ complexity of your implementation? Add your
-answer, including your reasoning, to this markdown file.
+The **worst-case** $\Theta$ runtime complexity of my cycle detection is the same as running a `dfs`. That means it is $\Theta(V + E)$ where $V$ represents the number of verticies and $E$ represents the number of edges in the graph.
+
+```js
+for (let node = 0; node < graph.length; node++) {
+  if (!visited.has(node) && search(node)) {
+    return true;
+  }
+}
+```
+
+If we take a closer look at the code we see we will iterate over each verticy in which we have not already visited. This means a total of $V$ veriticies will be iterated over.
+
+Then inside the `search()` function we iterate over all connected edges for the current node. Therefore the **worst-case** runtime complexity to detect a cycle in a graph using this algorithm is $\Theta(V + E)$.
+
+## Resources & Misc
+
+I also added a graphs.jpg of the graphs I created on a whiteboard for testing.
+
+I have been following a series on youtube which has been very helpful for all of these graph related problems. 
+
+https://www.youtube.com/watch?v=7fujbpJ0LB4
+
+Here is one of the videos I was replaying today to help me with this and the graph-search problem.
